@@ -8,7 +8,7 @@
     然后两个指针一起走 直到第一个指针走到链表末尾 第二个指针此时所指向的位置即为倒数第k个节点位置"""
 
 
-from LIST.linklist_base import LinkList
+from List.linklist_base import LinkList
 
 
 def find_kth_node_from_last(link_list, k):

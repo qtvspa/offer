@@ -10,7 +10,7 @@
 """ 对于python，可以直接使用列表的插入方法，每次插入数据只插入在首位"""
 
 
-from LIST.linklist_base import LinkList
+from List.linklist_base import LinkList
 
 
 def print_list_tail2head(LinkList):

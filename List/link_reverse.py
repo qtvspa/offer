@@ -6,7 +6,7 @@
     设定三个指针 分别指向当前节点 当前节点的前一节点 当前节点的后一节点
     遍历时 首先临时存储当前节点的后一节点 然后把当前节点的后一节点指向前一节点、前一节点=当前节点、当前节点=后一节点"""
 
-from LIST.linklist_base import LinkList
+from List.linklist_base import LinkList
 
 
 def list_reverse(link_list):

@@ -6,7 +6,7 @@
     使用递归 从头遍历链表 判断当前指针 哪个链表中的值小 即赋给合并链表指针即可"""
 
 
-from LIST.linklist_base import LinkList
+from List.linklist_base import LinkList
 
 
 def merge(l1_head, l2_head):

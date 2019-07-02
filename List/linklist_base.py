@@ -2,7 +2,7 @@
 
 
 class ListNode(object):
-    # 链表节点类
+    """ 链表节点类 """
 
     # p即模拟所存放的下一个结点的地址, 为了方便传参, 设置p的默认值为None
     def __init__(self, data, p=None):
@@ -11,7 +11,9 @@ class ListNode(object):
 
 
 class LinkList(object):
-    # 链表类
+    """
+        简单的单链表类
+    """
     def __init__(self):
         self.head = None
 
