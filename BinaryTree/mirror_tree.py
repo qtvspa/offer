@@ -29,5 +29,4 @@ def mirror(root_node):
 if __name__ == '__main__':
 
     root = gen_a_tree()
-    mirror(root)
-    # print(root.left.right.value)
+    print(mirror(root))

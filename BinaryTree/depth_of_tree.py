@@ -20,7 +20,7 @@ def dfs(root):
 
 def bfs(root):
 
-    # bfs遍历
+    # bfs遍历 利用队列将每层的跟节点逐一打印
     if not root:
         return 0
     my_queue = []
