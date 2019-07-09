@@ -25,3 +25,4 @@ if __name__ == '__main__':
 
     permutations(a, 0, len(a))
 
+
