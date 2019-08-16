@@ -25,6 +25,7 @@ def list_reverse(link_list):
 
     return p_last
 
+
 if __name__ == '__main__':
 
     l = LinkList()
