@@ -15,6 +15,8 @@
 def merge(a, b):
     tmp = []
     h = j = 0
+
+    # 逐一比较a与b中的元素 并将元素添加到tmp中
     while j < len(a) and h < len(b):
         if a[j] < b[h]:
             tmp.append(a[j])
@@ -23,9 +25,11 @@ def merge(a, b):
             tmp.append(b[h])
             h += 1
 
+    # 若率先遍历完a 则把b的剩余元素追加到tmp后面
     if j == len(a):
         for i in b[h:]:
             tmp.append(i)
+    # 反之 把a的剩余元素追加到tmp后面
     else:
         for i in a[j:]:
             tmp.append(i)
@@ -34,13 +38,14 @@ def merge(a, b):
 
 
 def merge_sort(lists):
+    """ 归并排序 """
 
     if len(lists) <= 1:
         return lists
 
     middle = len(lists)/2
     left = merge_sort(lists[: int(middle)])
-    right = merge_sort(lists[int(middle): ])
+    right = merge_sort(lists[int(middle):])
 
     return merge(left, right)
 

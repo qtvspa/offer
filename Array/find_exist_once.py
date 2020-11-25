@@ -21,7 +21,7 @@
 
 
 def get_the_once(a):
-
+    """ 思路二 """
     len_a = len(a)
     result = 0
     x = 0
@@ -30,6 +30,7 @@ def get_the_once(a):
     for i in range(len_a):
         result ^= a[i]
 
+    # 找到结果数字对应二进制中第一个为1的位置
     result_b = bin(result).replace('0b', '')
     result_b = result_b[::-1]
     for i, j in enumerate(result_b):
@@ -38,6 +39,7 @@ def get_the_once(a):
     a_list = []
     b_list = []
     for i in range(len_a):
+        # 逐一将数字转为二进制字符串
         s = bin(a[i]).replace('0b', '')[::-1]
         if len(s) > n and s[n] == '1':
             print(bin(a[i]).replace('0b', '')[::-1])

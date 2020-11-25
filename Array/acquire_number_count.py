@@ -6,7 +6,7 @@
 """ 思路 二分法 递归实现 时间复杂度O(logN)"""
 
 
-def get_the_count(a , target):
+def get_the_count(a, target):
     """
     :param a: a list of sorted numbers
     :param target: the number to be counted
@@ -36,7 +36,6 @@ def get_the_count(a , target):
             tmp = a[:l]
 
     return get_the_count(tmp, target)
-
 
 
 if __name__ == '__main__':

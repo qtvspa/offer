@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 
+from BinaryTree.base_tree_node import gen_a_tree
 
 """ 输入一棵二叉树，判断该二叉树是否是平衡二叉树。 """
 
@@ -9,7 +10,6 @@
     用后序遍历的方式遍历二叉树的每一个结点，在遍历到一个结点之前我们就已经遍历了它的左右子树。
     只要在遍历每个结点的时候记录它的深度，就可以一边遍历一边判断每个结点是不是平衡的。
 """
-from BinaryTree.base_tree_node import gen_a_tree, TreeNode
 
 
 def depth_of_tree(root):

@@ -17,7 +17,7 @@ def expo(num, exponent):
         num = abs(num)
         for i in range(exponent-1):
             result *= num
-        return 0 - result
+        return - result
     elif num > 0:
         for i in range(exponent-1):
             result *= num

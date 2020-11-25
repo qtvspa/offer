@@ -19,5 +19,5 @@ def first_repeat_num(a):
 
 if __name__ == '__main__':
 
-    l = [2,3,1,0,2,5,3]
+    l = [2, 3, 1, 0, 2, 5, 3]
     print(first_repeat_num(l))
