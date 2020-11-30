@@ -13,6 +13,7 @@ from BinaryTree.base_tree_node import gen_a_tree
 
 
 def depth_of_tree(root):
+    """ 获取树的深度 """
 
     if not root:
         return -1
@@ -27,10 +28,10 @@ def is_balance(root):
     if not root:
         return False
     else:
-        left = depth_of_tree(root.left)
-        right = depth_of_tree(root.right)
+        left_depth = depth_of_tree(root.left)
+        right_depth = depth_of_tree(root.right)
 
-    if abs(left - right) > 1:
+    if abs(left_depth - right_depth) > 1:
         return False
     return True
 

@@ -1,12 +1,11 @@
 # -*- coding:utf-8 -*-
 
+from queue import Queue
+from BinaryTree.base_tree_node import gen_a_tree
+
 """ 从上往下打印出二叉树的每个节点，同层节点从左至右打印。 """
 
 """ 思路 遍历时 使用一个队列来存储将要打印的结点 利用先进先出的特点 依次打印队列中的元素"""
-
-
-from queue import Queue
-from BinaryTree.base_tree_node import gen_a_tree
 
 
 def top2bottom_print(root):

@@ -11,23 +11,27 @@ class TreeNode:
 def add(root, data):
     """ 提供根节点和新的值 向一棵树添加新节点"""
     node = TreeNode(data)
+
     if not root.value:
         root = node
     else:
         my_queue = []
         root_node = root
         my_queue.append(root_node)
-        while my_queue:  # 对已有的节点进行层次遍历
-            treeNode = my_queue.pop(0)
-            if not treeNode.left:
-                treeNode.left = node
+
+        # 对已有的节点进行层次遍历
+        while my_queue:
+            tree_node = my_queue.pop(0)
+            if not tree_node.left:
+                tree_node.left = node
                 return
-            elif not treeNode.right:
-                treeNode.right = node
+            elif not tree_node.right:
+                tree_node.right = node
                 return
             else:
-                my_queue.append(treeNode.left)
-                my_queue.append(treeNode.right)
+                my_queue.append(tree_node.left)
+                my_queue.append(tree_node.right)
+    return root
 
 
 def dlr_print(tree):
@@ -44,10 +48,10 @@ def dlr_print_2(root):
     """ 非递归前序遍历 """
     if not root:
         return
-    my_stack = []
+    my_stack = [root]
     node = root
     while my_stack or node:
-        while node:  #从根节点开始，一直寻找他的左子树
+        while node:  # 从根节点开始，一直寻找他的左子树
             print(node.value)
             my_stack.append(node)
             node = node.left

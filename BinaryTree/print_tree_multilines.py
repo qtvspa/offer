@@ -48,7 +48,6 @@ def print_multi_2(root_node_list):
     return next_layer_nodes
 
 
-
 if __name__ == '__main__':
 
     root = gen_a_tree()

@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+from BinaryTree.base_tree_node import gen_a_tree
+
 """ 请实现一个函数按照Z字形打印二叉树，即第一行按照从左到右的顺序打印，
     第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。"""
 
@@ -10,8 +12,6 @@
     每次遍历node_list 直到此列表为空为止 
     初始node_list为一个包含根节点的list
 """
-
-from BinaryTree.base_tree_node import gen_a_tree
 
 
 def z_print(root_node):
@@ -42,7 +42,6 @@ def z_print(root_node):
             data.append(current_values)
 
     return data
-
 
 
 if __name__ == '__main__':

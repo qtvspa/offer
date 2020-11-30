@@ -15,6 +15,7 @@
                 
 """
 
+
 class TreeNodeSp:
     def __init__(self, x):
         self.value = x
