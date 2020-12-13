@@ -18,8 +18,9 @@ def predict_party_victory(senate: str) -> str:
             dire.append(i)
 
     while radiant and dire:
-        # +n 的目的是下一轮保持原有顺序
+        # 比较序号来决定出场顺序
         if radiant[0] < dire[0]:
+            # +n 的目的是下一轮保持原有顺序
             radiant.append(radiant[0] + n)
         else:
             dire.append(dire[0] + n)
