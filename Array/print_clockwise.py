@@ -11,46 +11,41 @@ import numpy as np
     应打印 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
 
 """
-""" 思路 定义四个边界 遍历二维数组即可"""
+""" 思路 定义四个边界 遍历二维数组即可 需要考虑边界条件"""
 
 
-def clockwise_print(array):
-    row, column = array.shape
+def clockwise_print(matrix):
+    m, n = len(matrix), len(matrix[0])
+    top, bottom, left, right = 0, m, 0, n
+    ans = []
 
-    top, bottom, left, right = 0, row, 0, column
-    tmp_list = []
     while bottom > top and right > left:
-        top1, bottom1, left1, right1 = top, bottom, left, right
-        for i in range(left1, right1):
-            tmp_list.append(array[top1][i])
-        top1 += 1
-        for j in range(top1, bottom1):
-            tmp_list.append(array[j][right1-1])
-        right1 -= 1
-        while right1 > left1:
-            tmp_list.append(array[bottom1-1][right1-1])
-            right1 -= 1
-        bottom1 -= 1
-        while bottom1 > top1:
-            tmp_list.append(array[bottom1-1][left1])
-            bottom1 -= 1
-        left1 += 1
-
+        for i in range(left, right):
+            ans.append(matrix[top][i])
         top += 1
-        bottom -= 1
-        left += 1
+
+        for i in range(top, bottom):
+            ans.append(matrix[i][right - 1])
         right -= 1
 
-    return tmp_list
+        for i in range(right, left, -1):
+            if bottom > top:
+                ans.append(matrix[bottom - 1][i - 1])
+        bottom -= 1
+
+        for i in range(bottom, top, -1):
+            if right > left:
+                ans.append(matrix[i - 1][left])
+        left += 1
+
+    return ans
 
 
 if __name__ == '__main__':
-
-    a = np.array([[1, 2, 3, 4],
-                  [5, 6, 7, 8],
-                  [9, 10, 11, 12],
-                  [13, 14, 15, 16]])
-    b = np.array([[1, 2, 3],
-                 [4, 5, 6],
-                 [7, 8, 9]])
-    print(clockwise_print(b))
+    a = [[1, 2, 3, 4],
+         [5, 6, 7, 8],
+         [9, 10, 11, 12]]
+    b = [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
+    print(clockwise_print(a))

@@ -19,6 +19,7 @@ def path(a, num):
     right = path(a.right, num - a.value)
 
     for i in left + right:
+        print([a.value] + i)
         res.append([a.value] + i)
     return res
 
@@ -26,6 +27,5 @@ def path(a, num):
 if __name__ == '__main__':
 
     root = gen_a_tree()
-    print(path(root, 8))
-
+    print(path(root, 10))
 
